@@ -25,8 +25,8 @@ urlpatterns = [
     path('',views.index, name='index'),
     path('show_food_items', views.show_food_items, name='show_food_items'),
     path('shop_food_items/<id>',views.show_food_items, name='show_food_items'),
-    path('edit/<int:id>/', views.edit_food, name='edit_food'),
-    path('delete/<int:id>/', views.delete_food, name='delete_food'),
+    path('edit/<id>', views.edit_food, name='edit_food'),
+    path('delete/<id>/', views.delete_food, name='delete_food'),
 ]
 if settings.DEBUG:
     urlpatterns +=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
